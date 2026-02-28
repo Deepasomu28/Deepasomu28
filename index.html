@@ -144,18 +144,7 @@ body{
   display:block;
 }
 
-/* Music Button */
-.music-btn{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#b22222;
-  color:white;
-  padding:12px 15px;
-  border-radius:50%;
-  cursor:pointer;
-  box-shadow:0 5px 15px rgba(0,0,0,0.3);
-}
+
 
 /* WhatsApp */
 .whatsapp{
@@ -194,7 +183,7 @@ for(let i=0;i<20;i++){
 <!-- Hero -->
 <section class="hero">
   <h1>💍 Wedding Invitation 💍</h1>
-  <h2 class="sparkle">A. Badrinath ❤️ S. Deepa</h2>
+  <h2 class="sparkle">A. Bathrinath ❤️ S. Deepa</h2>
   <div class="date">March 25, 2026 | Wednesday</div>
 
   <div class="countdown">
@@ -224,16 +213,16 @@ for(let i=0;i<20;i++){
   <div class="card">
     <p><strong>6:30 PM</strong><br>
     Anbu Thirumana Mandapam<br>
-    Balaji Nagar, Melpattambakkam</p>
+    Balaji Nagar, Melpattampakkam</p>
     <a class="button" target="_blank"
-    href="https://www.google.com/maps/search/?api=1&query=Anbu+Thirumana+Mandapam+Balaji+Nagar+Melpattambakkam">
+    href="https://www.google.com/maps/search/?api=1&query=Anbu+Thirumana+Mandapam+Balaji+Nagar+Melpattampakkam">
     View Reception</a>
   </div>
 </section>
 
 <!-- Gallery -->
 <section class="section">
-  <h2>📷 Our Memories</h2>
+  <h2>📷 Our Moments</h2>
   <div class="gallery">
     <img src="image.jpeg" class="active">
     <img src="image1.jpeg">
@@ -245,12 +234,6 @@ for(let i=0;i<20;i++){
   <p>We warmly invite you and your family to bless us ❤️</p>
 </section>
 
-<!-- Music -->
-<audio id="bgMusic" loop>
-  <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mp3">
-</audio>
-<div class="music-btn" onclick="toggleMusic()">🎶</div>
-
 <!-- WhatsApp Share -->
 <a class="whatsapp"
 href="https://wa.me/?text=You are invited to Badrinath ❤️ Deepa Wedding on March 25, 2026!"
@@ -258,7 +241,7 @@ target="_blank">Share</a>
 
 <script>
 /* Countdown */
-const weddingDate=new Date("March 25, 2026 09:00:00").getTime();
+const weddingDate=new Date("March 25, 2026 06:00:00").getTime();
 setInterval(()=>{
   const now=new Date().getTime();
   const distance=weddingDate-now;
@@ -277,12 +260,6 @@ setInterval(()=>{
   slides[index].classList.add("active");
 },3000);
 
-/* Music */
-function toggleMusic(){
-  let music=document.getElementById("bgMusic");
-  if(music.paused){music.play();}
-  else{music.pause();}
-}
 </script>
 
 </body>
