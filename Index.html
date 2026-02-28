@@ -7,123 +7,204 @@
 
 <meta name="description" content="You are warmly invited to the wedding of A. Badrinath and S. Deepa on March 25, 2026.">
 
-<!-- Structured Data (SEO Friendly) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Event",
-  "name": "Wedding Ceremony of Badrinath & Deepa",
-  "startDate": "2026-03-25T09:00",
-  "eventStatus": "https://schema.org/EventScheduled",
-  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-  "location": {
-    "@type": "Place",
-    "name": "Arulmigu Sri Devanatha Swamy Temple",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Thiruvanthipuram",
-      "addressRegion": "Tamil Nadu",
-      "addressCountry": "IN"
-    }
-  }
-}
-</script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  text-align: center;
-  background: linear-gradient(to right, #fff1eb, #ace0f9);
-  color: #333;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-section {
-  padding: 50px 20px;
+body{
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(135deg,#ffe0ec,#d0f4ff);
+  color:#333;
+  overflow-x:hidden;
 }
 
-h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
+/* HERO SECTION */
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+  background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+  url("https://images.unsplash.com/photo-1519741497674-611481863552") center/cover no-repeat;
+  color:white;
 }
 
-h2 {
-  color: #b22222;
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:48px;
+  letter-spacing:2px;
+  animation:fadeIn 2s ease-in-out;
 }
 
-.countdown {
-  font-size: 22px;
-  font-weight: bold;
-  margin-top: 20px;
+.hero h2{
+  font-size:26px;
+  margin:15px 0;
+  animation:fadeIn 3s ease-in-out;
 }
 
-.button {
-  display: inline-block;
-  padding: 12px 20px;
-  margin-top: 15px;
-  background: #b22222;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: 0.3s;
+.date{
+  font-size:20px;
+  margin-bottom:20px;
+  animation:fadeIn 4s ease-in-out;
 }
 
-.button:hover {
-  background: #8b0000;
+/* COUNTDOWN */
+.countdown{
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+  justify-content:center;
 }
 
-.footer {
-  margin-top: 40px;
-  padding: 20px;
-  font-size: 14px;
+.time-box{
+  background:rgba(255,255,255,0.2);
+  backdrop-filter:blur(10px);
+  padding:15px 20px;
+  border-radius:15px;
+  min-width:90px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+.time-box h3{
+  font-size:24px;
+}
+
+.time-box span{
+  font-size:14px;
+}
+
+/* SECTIONS */
+.section{
+  padding:60px 20px;
+  text-align:center;
+}
+
+.section h2{
+  font-family:'Playfair Display',serif;
+  font-size:32px;
+  margin-bottom:20px;
+  color:#b22222;
+}
+
+.card{
+  max-width:500px;
+  margin:20px auto;
+  padding:25px;
+  border-radius:20px;
+  background:white;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.button{
+  display:inline-block;
+  margin-top:15px;
+  padding:10px 18px;
+  background:#b22222;
+  color:white;
+  border-radius:30px;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.button:hover{
+  background:#8b0000;
+  transform:scale(1.05);
+}
+
+/* FOOTER */
+.footer{
+  padding:30px;
+  background:#b22222;
+  color:white;
+  font-size:14px;
+}
+
+/* ANIMATION */
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(20px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  .hero h1{font-size:32px;}
+  .hero h2{font-size:20px;}
+  .time-box{min-width:70px;}
 }
 </style>
 </head>
 
 <body>
 
-<section>
+<!-- HERO -->
+<section class="hero">
   <h1>💍 Wedding Invitation 💍</h1>
   <h2>A. Badrinath ❤️ S. Deepa</h2>
-  <p>March 25, 2026 | Wednesday</p>
-  <div class="countdown" id="countdown"></div>
+  <div class="date">March 25, 2026 | Wednesday</div>
+
+  <div class="countdown" id="countdown">
+    <div class="time-box"><h3 id="days">0</h3><span>Days</span></div>
+    <div class="time-box"><h3 id="hours">0</h3><span>Hours</span></div>
+    <div class="time-box"><h3 id="minutes">0</h3><span>Minutes</span></div>
+    <div class="time-box"><h3 id="seconds">0</h3><span>Seconds</span></div>
+  </div>
 </section>
 
-<section>
+<!-- WEDDING -->
+<section class="section">
   <h2>📍 Wedding Ceremony</h2>
-  <p>Arulmigu Sri Devanatha Swamy Temple<br>Thiruvanthipuram, Tamil Nadu</p>
-  <a class="button" href="https://www.google.com/maps/search/?api=1&query=Arulmigu+Sri+Devanatha+Swamy+Temple+Thiruvanthipuram" target="_blank">
-    View on Google Maps
-  </a>
+  <div class="card">
+    <p>Arulmigu Sri Devanatha Swamy Temple<br>
+    Thiruvanthipuram, Tamil Nadu</p>
+    <a class="button" target="_blank"
+      href="https://www.google.com/maps/search/?api=1&query=Arulmigu+Sri+Devanatha+Swamy+Temple+Thiruvanthipuram">
+      View Location
+    </a>
+  </div>
 </section>
 
-<section>
+<!-- RECEPTION -->
+<section class="section">
   <h2>🎉 Reception</h2>
-  <p>Anbu Thirumana Mandapam<br>Balaji Nagar, Melvattamangalam</p>
-  <a class="button" href="https://www.google.com/maps/search/?api=1&query=Anbu+Thirumana+Mandapam+Balaji+Nagar+Melvattamangalam" target="_blank">
-    View Reception Location
-  </a>
+  <div class="card">
+    <p>Anbu Thirumana Mandapam<br>
+    Balaji Nagar, Melvattamangalam</p>
+    <a class="button" target="_blank"
+      href="https://www.google.com/maps/search/?api=1&query=Anbu+Thirumana+Mandapam+Balaji+Nagar+Melvattamangalam">
+      View Reception
+    </a>
+  </div>
 </section>
 
+<!-- FOOTER -->
 <section class="footer">
-  We warmly invite you and your family to join us and bless the couple on this special occasion.
+  We warmly invite you and your family to join us and bless the couple ❤️
 </section>
 
 <script>
-// Countdown Timer
 const weddingDate = new Date("March 25, 2026 09:00:00").getTime();
 
-setInterval(function() {
+setInterval(function(){
   const now = new Date().getTime();
   const distance = weddingDate - now;
 
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-
-  document.getElementById("countdown").innerHTML =
-    days + " Days " + hours + " Hours " + minutes + " Minutes Left ❤️";
-}, 1000);
+  document.getElementById("days").innerHTML =
+    Math.floor(distance / (1000*60*60*24));
+  document.getElementById("hours").innerHTML =
+    Math.floor((distance % (1000*60*60*24))/(1000*60*60));
+  document.getElementById("minutes").innerHTML =
+    Math.floor((distance % (1000*60*60))/(1000*60));
+  document.getElementById("seconds").innerHTML =
+    Math.floor((distance % (1000*60))/1000);
+},1000);
 </script>
 
 </body>
