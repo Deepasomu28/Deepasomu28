@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Badrinath ❤️ Deepa | Wedding Invitation</title>
+
+<meta name="description" content="You are warmly invited to the wedding of A. Badrinath and S. Deepa on March 25, 2026.">
+
+<!-- Structured Data (SEO Friendly) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Wedding Ceremony of Badrinath & Deepa",
+  "startDate": "2026-03-25T09:00",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "location": {
+    "@type": "Place",
+    "name": "Arulmigu Sri Devanatha Swamy Temple",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Thiruvanthipuram",
+      "addressRegion": "Tamil Nadu",
+      "addressCountry": "IN"
+    }
+  }
+}
+</script>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  background: linear-gradient(to right, #fff1eb, #ace0f9);
+  color: #333;
+}
+
+section {
+  padding: 50px 20px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #b22222;
+}
+
+.countdown {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 20px;
+  margin-top: 15px;
+  background: #b22222;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: #8b0000;
+}
+
+.footer {
+  margin-top: 40px;
+  padding: 20px;
+  font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<section>
+  <h1>💍 Wedding Invitation 💍</h1>
+  <h2>A. Badrinath ❤️ S. Deepa</h2>
+  <p>March 25, 2026 | Wednesday</p>
+  <div class="countdown" id="countdown"></div>
+</section>
+
+<section>
+  <h2>📍 Wedding Ceremony</h2>
+  <p>Arulmigu Sri Devanatha Swamy Temple<br>Thiruvanthipuram, Tamil Nadu</p>
+  <a class="button" href="https://www.google.com/maps/search/?api=1&query=Arulmigu+Sri+Devanatha+Swamy+Temple+Thiruvanthipuram" target="_blank">
+    View on Google Maps
+  </a>
+</section>
+
+<section>
+  <h2>🎉 Reception</h2>
+  <p>Anbu Thirumana Mandapam<br>Balaji Nagar, Melvattamangalam</p>
+  <a class="button" href="https://www.google.com/maps/search/?api=1&query=Anbu+Thirumana+Mandapam+Balaji+Nagar+Melvattamangalam" target="_blank">
+    View Reception Location
+  </a>
+</section>
+
+<section class="footer">
+  We warmly invite you and your family to join us and bless the couple on this special occasion.
+</section>
+
+<script>
+// Countdown Timer
+const weddingDate = new Date("March 25, 2026 09:00:00").getTime();
+
+setInterval(function() {
+  const now = new Date().getTime();
+  const distance = weddingDate - now;
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+  document.getElementById("countdown").innerHTML =
+    days + " Days " + hours + " Hours " + minutes + " Minutes Left ❤️";
+}, 1000);
+</script>
+
+</body>
+</html>
